@@ -1,11 +1,10 @@
-$pixelpx: 600px;
+$pixelpx: 550px;
 $colors : (
     footer: #001820,
 );
 $margintop: 100px;
 $marginleft: 50px;
 $marginright: 50px;
-
 * {
     font-family: 'Proxima Nova';
     box-sizing: border-box;
@@ -14,47 +13,41 @@ $marginright: 50px;
 }
 
 .navbar {
-    width: 100%;
+    font-size: 15px;
     background-color: white;
     box-shadow: 0 2px 8px 0 rgba(0,52,119,0.10);
-    font-size: 18px;
-    color: white;
     padding-bottom: 10px;
 }
 
 .main-nav {
-    background-color: white;
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
     list-style-type: none;
-    display: none;
+    transform: translateX(0px);
+    margin: auto;
 }
 
 .nav-links,
 .logo {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.7);
+    margin: auto;
+    width: 150px;
+    position: relative;
 }
 
-.main-nav {
-    padding-top: 10px;
-    padding-right: 30px;
-    li {
-        text-align: center;
-        margin: 15px auto;
-        float: right;
-    }
-    a {
-        float: right;
-        transition: all .2s ease-in-out;
-        color: black;
-        font-size: 15px;
-    }
+.main-nav li {
+    text-align: center;
+    margin: 20px 5px;
+}
+
+.main-nav a {
+    color: black;
 }
 
 .logo {
     display: inline-block;
-    margin-top: 1px;
-    margin-left: 20px;
-
+    font-size: 22px;
+    margin: auto;
 }
 
 .navbar-toggle {
@@ -70,41 +63,23 @@ $marginright: 50px;
     display: block;
 }
 
-@media screen and (max-width:767px) {
-    .main-nav {
-        display: flex;
-        margin-right: 30px;
-        flex-direction: row;
-    }
-
-    .main-nav li {
-        margin: auto;
-    }
-
-    .nav-links {
-        margin-left: 40px;
-    }
-
-    .logo {
-        margin: auto;
-        width: 150px;
-        position: relative;
-    }
-    .logo:hover,
-    .nav-links:hover {
-        font-size: 20px;
-    }
-}
-
 @media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+
     .main-nav {
         display: flex;
         margin-right: 30px;
         flex-direction: row;
+        justify-content: flex-end;
     }
 
     .main-nav li {
-        float: right;
         margin: 0;
     }
 
@@ -113,15 +88,20 @@ $marginright: 50px;
     }
 
     .logo {
-        width: 150px;
-        position: relative;
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 20px;
     }
+
+    .navbar-toggle {
+        display: none;
+    }
+
     .logo:hover,
     .nav-links:hover {
-        font-size: 20px;
+        color: rgba(255, 255, 255, 1);
     }
 }
-
 #section1 {
     padding-right: 0px !important;
     font-family: 'Proxima Nova';
@@ -130,7 +110,7 @@ $marginright: 50px;
         font-size: 30px;
     }
     .content {
-        padding: 70px 70px;
+        padding: 150px 150px;
     }
     .grid-container {
         display: grid;
@@ -151,8 +131,8 @@ $marginright: 50px;
         }
     }
     img {
-        width: 700px;
-        height: 700px;
+        width: $pixelpx;
+        height: $pixelpx;
         float: right;
         position: relative;
     }
@@ -161,12 +141,16 @@ $marginright: 50px;
 #section2 {
     img {
         float: left;
-        height: 700px;
-        widows: 700px;
+        height: $pixelpx;
+        widows: $pixelpx;
     }
 
     .content{
-        position: relative;       
+        position: relative;     
+        padding: 150px 150px;
+        h2 {
+            font-weight: bold;
+        }
     }
 }
 
@@ -177,8 +161,10 @@ $marginright: 50px;
     .experience {
         padding: 150px 150px;
         position: relative;
+        h2 {
+            font-weight: bold;
+        }
     }
-
     img {
         float: right;
         height: $pixelpx;
@@ -190,7 +176,6 @@ $marginright: 50px;
     padding-top: 80px;
     ul {
         margin: auto;
-        width: 100px;
         list-style-type: none !important;
     }
     li {
@@ -376,6 +361,7 @@ $marginright: 50px;
 
 #section11 {
     padding-bottom: 100px;
+    padding-left: 100px;
     .prev {
         span {
             font-size: 20px;
@@ -391,7 +377,6 @@ $marginright: 50px;
             transition: 0.2s;
             transform: scale(1.1); 
         }
-        padding-left: 100px;
     }
     .next {
         text-align: right;
@@ -417,8 +402,11 @@ footer {
     height: 450px;
     color: white;
     background-color: map-get($colors , footer);
+    .container-fluid {
+        padding-top: 100px;
+    }
     img {
-        margin-top: auto;
+        margin-top: 40px;
         width: 160px;
         height: 40px;
         position: absolute;
@@ -427,7 +415,7 @@ footer {
         transform: rotate(270deg);
     }
     .aboutantikode {
-        font-size: 12px;
+        font-size: 15px;
         padding-left: 130px;
     }
     .navigate a {
@@ -454,16 +442,18 @@ footer {
     }
 }
 
-
-@media only screen and (max-width:450px) {
-    .content {
-        padding: 70px 70px;
-    }
-
+@media screen and (max-width:450px) {
     #section1 {
-        img {
-            width: 300px;
-            height: 300px;
+        .content {
+            padding: 70px 70px;
+        }
+    
+        .col-sm-6 {
+            img {
+                width: 300px;
+                height: 300px;
+                margin: auto;
+            }
         }
         .images {
             img {
@@ -483,6 +473,7 @@ footer {
         }
     }
 
+
     #section2 {
         img {
             float: right;
@@ -490,6 +481,7 @@ footer {
             width: 300px;
         }
         .content {
+            padding: 70px 70px;
             h2 {
                 font-weight: bold;
                 font-size: 20px;
@@ -512,20 +504,29 @@ footer {
             font-size: 15px;
         }
         img {
+            float: right;
             width: 300px;
             height: 300px;
         }
     }
 
     #section4 {
+        margin-top: 40px;
+        .expertise {
+            h2 {
+                text-align: center;
+            }
+        }
         .list {
             margin-top: 20px;
         }
         .icon {
             margin-top: 20px;
         }
+        ul {
+            margin-left: 50px;
+        }
     }
-
 
     #section5 {
         .visual {
@@ -534,12 +535,11 @@ footer {
                 font-size: 20px;
             }
             p {
-                margin: 10px;
+                margin: 30px;
                 font-size: 15px;
             }
         }
     }
-
     #section6 {
         .content {
             padding: 70px 70px;
@@ -558,7 +558,6 @@ footer {
             }
         }
     }
-
     #section7 {
         .gradient{
             #type {
@@ -598,6 +597,7 @@ footer {
         }
     }
 
+
     #section8 {
         .content {
             padding: 70px 70px;
@@ -610,8 +610,8 @@ footer {
             font-size: 15px;
         }
         img {
-            width: 400px;
-            height: 400px;
+            width: 300px;
+            height: 300px;
         }
     }
 
@@ -640,7 +640,8 @@ footer {
             height: 300px;
         }
     }
-    
+
+        
     #section10{
         padding-top: 50px;
         height: 350px;
@@ -654,9 +655,22 @@ footer {
         }
     }
 
+    #section11 {
+        padding-left: 0;
+        .prev {
+            text-align: center;
+        }
+        .next {
+            text-align: center;
+            margin-left: 60px;
+        }
+    }
 
     footer {
-        height: 950px;
+        height: 1000px;
+        .container-fluid{
+            padding-top: 0px;
+        }
         .col-md-6, .col-md-3{
             padding-left: 0px !important;
         }
@@ -682,210 +696,12 @@ footer {
         }
         .contactus {
             margin-top: 50px;
-            padding-left: 100px;
+            padding-left: 90px;
         }
         span {
-            font-size: 10px;
-        }
-    }
-}
-
-/*
-@media only screen and (max-width:900px) {
-    #section1 {
-        img {
-            width: 400px;
-            height: 400px;
-        }
-        .images {
-            img {
-                width: 100px;
-                height: 100px;
-            }
-        }
-        h1 {
-            font-size: 25px;
-            font-weight: bold;
-        }
-        .grid-container {
-            font-size: 10px;
-            display: grid;
-            grid-template-columns: 100px 100px;
-            list-style-type: none;
-        }
-        .grid-item {
-            padding: 1px;
-        }
-    }
-    #section2 {
-        margin: 20px;
-        img {
-            float: left;
-            height: 300px;
-            width: 300px;
-        }
-        .content {
-            margin: 30px;
-            h2 {
-                font-weight: bold;
-                font-size: 20px;
-            }
-            p {
-                font-size: 15px;
-            }
-        }
-    }
-    #section3 {
-        .experience {
-            padding: 70px 70px;
-        }
-        h2 {
-            font-weight: bold;
-            font-size: 20px;
-        }
-        p {
-            font-size: 15px;
-        }
-        img {
-            width: 300px;
-            height: 300px;
-        }
-    }
-}
-#section4 {
-    .expertise {
-        h2 {
-            font-size: 10px;
-            text-align: center; 
-            font-weight: bold;
-        }
-    }
-    .container-fluid {
-        margin-top: 40px;
-    }
-    .list {
-        font-size: 20px;
-        margin: auto;
-    }
-    .icon {
-        margin: auto;
-    }
-}
-
-#section5 {
-    .visual {
-        h2 {
-            font-weight: bold;
-            font-size: 20px;
-        }
-        p {
-            font-size: 15px;
-        }
-    }
-}
-
-#section6 {
-    .content {
-        padding: 70px 70px;
-        h2 {
-            font-weight: bold;
-            font-size: 20px;
-        }
-        p {
-            font-size: 15px;
-        }
-    }
-    .images {
-        img {
-            float: right;
-            width: 300px;
-            height: 300px;
-        }
-    }
-}
-
-#section8 {
-    img {
-        width: 300px;
-        height: 300px;
-    }
-    .content {
-        margin: 40px;
-        h2 {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        p {
-            font-size: 15px;
-        }
-    }
-}
-
-#section9 {
-    margin-top: 30px;
-    img {
-        width: 300px;
-        height: 300px;
-    }
-    .content {
-        padding: 70px 70px;
-        h2 {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        p {
-            font-size: 15px;
-        }
-    }
-    .images {
-        img {
-            position: relative;
-        }
-    }
-}
-
-#section10 {
-    margin-top: 30px;
-    p {
-        margin-top: 20px;
-    }
-}
-
-#section11 {
-    .prev {
-        padding-left: 40px;
-        text-align: left;
-        span {
-            font-size: 15px;
-        }
-    }
-    .next {
-        padding-right: 20px;
-        text-align: right;
-        span {
-            font-size: 15px;
-        }
-    }
-}
-
-footer {
-    height: 450px;
-    img {
-        margin-top: 60px;
-    }
-    .aboutantikode {
-        p {
+            margin: auto;
             font-size: 13px;
         }
     }
-    .navigate {
-        p {
-            font-size: 12px;
-        }
-    }
-    .contactus {
-        p {
-            font-size: 12px;
-        }
-    }
+
 }

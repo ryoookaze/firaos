@@ -7,50 +7,48 @@
 }
 
 .navbar {
-  width: 100%;
+  font-size: 15px;
   background-color: white;
   -webkit-box-shadow: 0 2px 8px 0 rgba(0, 52, 119, 0.1);
           box-shadow: 0 2px 8px 0 rgba(0, 52, 119, 0.1);
-  font-size: 18px;
-  color: white;
   padding-bottom: 10px;
 }
 
 .main-nav {
-  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   list-style-type: none;
-  display: none;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  margin: auto;
 }
 
 .nav-links,
 .logo {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.main-nav {
-  padding-top: 10px;
-  padding-right: 30px;
+  margin: auto;
+  width: 150px;
+  position: relative;
 }
 
 .main-nav li {
   text-align: center;
-  margin: 15px auto;
-  float: right;
+  margin: 20px 5px;
 }
 
 .main-nav a {
-  float: right;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
   color: black;
-  font-size: 15px;
 }
 
 .logo {
   display: inline-block;
-  margin-top: 1px;
-  margin-left: 20px;
+  font-size: 22px;
+  margin: auto;
 }
 
 .navbar-toggle {
@@ -66,35 +64,20 @@
   display: block;
 }
 
-@media screen and (max-width: 767px) {
-  .main-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: 30px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .main-nav li {
-    margin: auto;
-  }
-  .nav-links {
-    margin-left: 40px;
-  }
-  .logo {
-    margin: auto;
-    width: 150px;
-    position: relative;
-  }
-  .logo:hover,
-  .nav-links:hover {
-    font-size: 20px;
-  }
-}
-
 @media screen and (min-width: 768px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .main-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -104,21 +87,27 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .main-nav li {
-    float: right;
     margin: 0;
   }
   .nav-links {
     margin-left: 40px;
   }
   .logo {
-    width: 150px;
-    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .navbar-toggle {
+    display: none;
   }
   .logo:hover,
   .nav-links:hover {
-    font-size: 20px;
+    color: white;
   }
 }
 
@@ -157,20 +146,25 @@
 }
 
 #section1 img {
-  width: 700px;
-  height: 700px;
+  width: 550px;
+  height: 550px;
   float: right;
   position: relative;
 }
 
 #section2 img {
   float: left;
-  height: 700px;
-  widows: 700px;
+  height: 550px;
+  widows: 550px;
 }
 
 #section2 .content {
   position: relative;
+  padding: 150px 150px;
+}
+
+#section2 .content h2 {
+  font-weight: bold;
 }
 
 #section3 .container-fluid {
@@ -182,10 +176,14 @@
   position: relative;
 }
 
+#section3 .experience h2 {
+  font-weight: bold;
+}
+
 #section3 img {
   float: right;
-  height: 600px;
-  width: 600px;
+  height: 550px;
+  width: 550px;
 }
 
 #section4 {
@@ -194,7 +192,6 @@
 
 #section4 ul {
   margin: auto;
-  width: 100px;
   list-style-type: none !important;
 }
 
@@ -206,12 +203,6 @@
   font-weight: bold;
   text-align: center;
 }
-
-
-#section4 img {
-  position: relative;
-}
-
 
 #section5 .visual h2 {
   text-align: center;
@@ -236,12 +227,16 @@
 
 #section6 img {
   float: right;
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
 }
 
 #section6 .content {
   padding: 150px 150px;
+}
+
+#section6 .content h2 {
+  font-weight: bold;
 }
 
 #section7 {
@@ -339,8 +334,8 @@
 }
 
 #section9 img {
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
   float: right;
 }
 
@@ -392,9 +387,6 @@
 
 #section11 {
   padding-bottom: 100px;
-}
-
-#section11 .prev {
   padding-left: 100px;
 }
 
@@ -449,8 +441,12 @@ footer {
   background-color: #001820;
 }
 
+footer .container-fluid {
+  padding-top: 100px;
+}
+
 footer img {
-  margin-top: auto;
+  margin-top: 40px;
   width: 160px;
   height: 40px;
   position: absolute;
@@ -461,7 +457,7 @@ footer img {
 }
 
 footer .aboutantikode {
-  font-size: 12px;
+  font-size: 15px;
   padding-left: 130px;
 }
 
@@ -491,13 +487,14 @@ footer span {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px) {
   #section1 .content {
     padding: 70px 70px;
   }
-  #section1 img {
+  #section1 .col-sm-6 img {
     width: 300px;
     height: 300px;
+    margin: auto;
   }
   #section1 .images img {
     width: 100px;
@@ -519,7 +516,6 @@ footer span {
     height: 300px;
     width: 300px;
   }
-
   #section2 .content {
     padding: 70px 70px;
   }
@@ -541,8 +537,15 @@ footer span {
     font-size: 15px;
   }
   #section3 img {
+    float: right;
     width: 300px;
     height: 300px;
+  }
+  #section4 {
+    margin-top: 40px;
+  }
+  #section4 .expertise h2 {
+    text-align: center;
   }
   #section4 .list {
     margin-top: 20px;
@@ -550,12 +553,15 @@ footer span {
   #section4 .icon {
     margin-top: 20px;
   }
+  #section4 ul {
+    margin-left: 50px;
+  }
   #section5 .visual h2 {
     font-weight: bold;
     font-size: 20px;
   }
   #section5 .visual p {
-    margin: 10px;
+    margin: 30px;
     font-size: 15px;
   }
   #section6 .content {
@@ -581,9 +587,9 @@ footer span {
     color: white;
   }
   #section7 .grid-container {
-    /*margin-top: 50px;
-            margin-bottom: 50px;*/
-    /*margin-left: 30px;*/
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 30px;
     position: relative;
     display: -ms-grid;
     display: grid;
@@ -624,8 +630,8 @@ footer span {
     font-size: 15px;
   }
   #section8 img {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
   }
   #section9 .content {
     padding: 70px 70px;
@@ -660,8 +666,21 @@ footer span {
     margin-top: 10px;
     font-size: 15px;
   }
+  #section11 {
+    padding-left: 0;
+  }
+  #section11 .prev {
+    text-align: center;
+  }
+  #section11 .next {
+    text-align: center;
+    margin-left: 60px;
+  }
   footer {
-    height: 950px;
+    height: 1000px;
+  }
+  footer .container-fluid {
+    padding-top: 0px;
   }
   footer .col-md-6, footer .col-md-3 {
     padding-left: 0px !important;
@@ -687,208 +706,12 @@ footer span {
     padding-left: 90px;
   }
   footer .contactus {
-    margin-top: 30px;
-    margin-right: 50px;
-    font-size: 15px;
+    margin-top: 50px;
     padding-left: 90px;
   }
   footer span {
-    font-size: 10px;
+    margin: auto;
+    font-size: 13px;
   }
-}
-/*
-@media only screen and (max-width: 900px) {
-  #section1 img {
-    width: 400px;
-    height: 400px;
-  }
-  #section1 .images img {
-    width: 100px;
-    height: 100px;
-  }
-  #section1 h1 {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  #section1 .grid-container {
-    font-size: 10px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 100px 100px;
-        grid-template-columns: 100px 100px;
-    list-style-type: none;
-  }
-  #section1 .grid-item {
-    padding: 1px;
-  }
-  #section2 {
-    margin: 20px;
-  }
-  #section2 img {
-    float: left;
-    height: 300px;
-    width: 300px;
-  }
-  #section2 .content {
-    margin: 30px;
-  }
-  #section2 .content h2 {
-    font-weight: bold;
-    font-size: 20px;
-  }
-  #section2 .content p {
-    font-size: 15px;
-  }
-  #section3 .experience {
-    padding: 70px 70px;
-  }
-  #section3 h2 {
-    font-weight: bold;
-    font-size: 20px;
-  }
-  #section3 p {
-    font-size: 15px;
-  }
-  #section3 img {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-#section4 .expertise h2 {
-  font-size: 10px;
-  text-align: center;
-  font-weight: bold;
-}
-
-#section4 .container-fluid {
-  margin-top: 40px;
-}
-
-#section4 .list {
-  font-size: 20px;
-  margin: auto;
-}
-
-#section4 .icon {
-  margin: auto;
-}
-
-#section5 .visual h2 {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-#section5 .visual p {
-  font-size: 15px;
-}
-
-#section6 .content {
-  padding: 70px 70px;
-}
-
-#section6 .content h2 {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-#section6 .content p {
-  font-size: 15px;
-}
-
-#section6 .images img {
-  float: right;
-  width: 300px;
-  height: 300px;
-}
-
-#section8 img {
-  width: 300px;
-  height: 300px;
-}
-
-#section8 .content {
-  margin: 40px;
-}
-
-#section8 .content h2 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#section8 .content p {
-  font-size: 15px;
-}
-
-#section9 {
-  margin-top: 30px;
-}
-
-#section9 img {
-  width: 300px;
-  height: 300px;
-}
-
-#section9 .content {
-  padding: 70px 70px;
-}
-
-#section9 .content h2 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#section9 .content p {
-  font-size: 15px;
-}
-
-#section9 .images img {
-  position: relative;
-}
-
-#section10 {
-  margin-top: 30px;
-}
-
-#section10 p {
-  margin-top: 20px;
-}
-
-#section11 .prev {
-  padding-left: 40px;
-  text-align: left;
-}
-
-#section11 .prev span {
-  font-size: 15px;
-}
-
-#section11 .next {
-  padding-right: 20px;
-  text-align: right;
-}
-
-#section11 .next span {
-  font-size: 15px;
-}
-
-footer {
-  height: 450px;
-}
-
-footer img {
-  margin-top: 60px;
-}
-
-footer .aboutantikode p {
-  font-size: 13px;
-}
-
-footer .navigate p {
-  font-size: 12px;
-}
-
-footer .contactus p {
-  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
