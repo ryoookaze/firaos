@@ -302,8 +302,12 @@ $marginright: 50px;
     }
     .content {
         margin-top: 20%;
+        padding: 150px 150px;
         /*margin-left: 20%;*/
         position: relative;
+        h2 {
+            font-weight: bold;
+        }
     }
 }
 
@@ -315,8 +319,10 @@ $marginright: 50px;
     }
     
     .content {
-        
         padding: 120px 120px;
+        h2 {
+            font-weight: bold;
+        }
     }
 
     .images {
@@ -349,6 +355,7 @@ $marginright: 50px;
         margin-left: 25%;
     }
     p {
+        margin-top: 20px;
         text-align: center;
     }
     h1 {

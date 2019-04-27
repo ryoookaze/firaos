@@ -329,8 +329,13 @@
 
 #section8 .content {
   margin-top: 20%;
+  padding: 150px 150px;
   /*margin-left: 20%;*/
   position: relative;
+}
+
+#section8 .content h2 {
+  font-weight: bold;
 }
 
 #section9 img {
@@ -341,6 +346,10 @@
 
 #section9 .content {
   padding: 120px 120px;
+}
+
+#section9 .content h2 {
+  font-weight: bold;
 }
 
 #section9 .images img {
@@ -374,6 +383,7 @@
 }
 
 #section10 p {
+  margin-top: 20px;
   text-align: center;
 }
 
